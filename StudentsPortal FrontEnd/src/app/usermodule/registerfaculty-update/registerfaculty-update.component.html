@@ -1,0 +1,64 @@
+
+
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="assets\img\portal.png" alt=""/>
+            <h3>Welcome To Student's Online Portal</h3>
+            <p></p>
+            <input type="submit" name="" value="Login" (click)="loginUser()" /><br/>
+        </div>
+        <div class="col-md-9 register-right">
+            <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link " id="home-tab" data-toggle="tab" href="/register" role="tab" aria-controls="home" aria-selected="true">Student</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" id="profile-tab" data-toggle="tab" href="/registerfaculty" role="tab" aria-controls="home" aria-selected="true">Faculty</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">Apply as a Faculty</h3>
+                    <div class="row register-form">
+                        <div class="col-md-6">
+                           
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="First Name *" required [(ngModel)]="faculty.fname" value="" name="fname" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Last Name *" required [(ngModel)]="faculty.lname" value="" name="lname" />
+                            </div>
+                           
+                            <div class="form-group">
+                                <input type="password" [(ngModel)]="pwd" class="form-control" placeholder=" Password *"  value="" name="Password" />
+                            </div>
+                            <div class="form-group" >
+                                <input type="password" [(ngModel)]="cmfpwd" class="form-control" placeholder=" ConfirmPassword *"  value="" name="ConfirmPassword" />
+                            </div>
+                           
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Email *" value="" required [(ngModel)]="faculty.email" name="email"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" minlength="10" maxlength="10" class="form-control" placeholder="Your Phone *" required [(ngModel)]="faculty.phno" value="" name="phno" />
+                            </div>
+                            
+                            <div class="form-group">
+                                <input type="date" class="form-control" placeholder=" Birthdate *" required [(ngModel)]="faculty.dob" value="" name="dob" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Address *" required [(ngModel)]="faculty.address" value="" name="address" />
+                            </div>
+                            <input type="submit" class="btnRegister"  value="Register" (click)="updateFaculty1()"/>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>                            

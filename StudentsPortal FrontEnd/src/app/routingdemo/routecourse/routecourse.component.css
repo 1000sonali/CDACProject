@@ -1,0 +1,7 @@
+.thumbnail:hover {
+    position:relative;
+    width:250;
+    height:auto;
+    display:block;
+    z-index:999;
+}

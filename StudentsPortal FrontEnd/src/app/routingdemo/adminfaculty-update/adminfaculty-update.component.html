@@ -1,0 +1,33 @@
+<app-headers></app-headers>
+
+<br><br><br><br>
+
+
+
+<div  style="width: 400px; margin-left: 450px;" align=center>
+    <form (ngSubmit)="updateFaculty()">
+
+        <div class="form-group" align=center>
+            <label for="name">Faculty ID</label>
+            <input type="number" class="form-control" align=center id="stdid"  readonly [(ngModel)]="faculty.facultyid" name="stdid" required>
+          </div>
+    
+          <div class="form-group">
+            <label for="name">Faculty First Name</label>
+            <input type="text" class="form-control" id="studentfname" required [(ngModel)]="faculty.firstname" name="studentfname">
+          </div>
+        
+          <div class="form-group">
+            <label for="name">Faculty Last Name</label>
+            <input type="text" class="form-control" id="studentlname" required [(ngModel)]="faculty.lastname" name="studentlname">
+          </div>
+        
+        
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+  </div>
+
+
+

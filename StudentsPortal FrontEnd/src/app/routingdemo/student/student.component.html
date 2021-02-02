@@ -1,0 +1,52 @@
+<app-headers></app-headers>
+<br><br><br><br><br><br>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading" id="component2">
+    <h2>Faculty List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button (click)="printComponent('component2')" class="btn btn-info">Print</button>
+</h2>      
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped" id="excel-table">
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Student First Name</th>
+          <th>Student Last Name</th>
+          <th>Student Date of Birth</th>
+          <th>Student Course Fees</th>
+          <th>Student Course Name</th>
+          <th>Student Email ID</th>
+          <th>Student Contact No</th>
+          <th>Student Address</th>
+          <th>
+         <button (click)="exportexcel()" class="btn btn-info">Export to Excel</button></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fs of students">
+          <td>{{fs.pId}}</td>
+          <td>{{fs.fname}}</td>
+          <td>{{fs.lname}}</td>
+          <td>{{fs.dob}}</td>
+          <td>{{fs.courseFees}}</td>
+          <td>{{fs.coursename.courseName}}</td>
+          <td>{{fs.email}}</td>
+          <td>{{fs.phno}}</td>
+          <td>{{fs.address}}</td>
+         
+          <td><button (click)="deleteStudent(fs.courseId)" class="btn btn-danger">Delete</button>
+           
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

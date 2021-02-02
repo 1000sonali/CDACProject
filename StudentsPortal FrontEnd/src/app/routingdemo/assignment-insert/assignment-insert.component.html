@@ -1,0 +1,38 @@
+<app-headers></app-headers>
+
+<br><br><br><br><br>
+
+
+
+<div  style="width: 400px; margin-left: 450px;" align=center>
+    <form (ngSubmit)="insertAssignment()">
+      
+    
+        <div class="form-group">
+          <label for="name">Assignment Name</label>
+          <input type="text" class="form-control" id="subjectName" required [(ngModel)]="asn.assignName" name="subjectName">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Subject Name</label>
+            <select class="form-control" id="subjectId"  required [(ngModel)]="subid" name="subjectId">
+           
+              <option *ngFor="let s of soptions" value={{s.subjectId}}>
+              {{s.subjectName}}
+            </option>
+            </select>
+          </div>
+          
+          <div class="form-group" align=center>
+              <label for="name">AssignmentLink Link</label>
+              <input type="text" class="form-control" align=center id="examLink" [(ngModel)]="asn.assignLink" name="examLink" required>
+            </div>
+  
+          <div class="form-group" align=center>
+              <label for="name">Date Of Submission</label>
+              <input type="datetime-local" class="form-control" required placeholder="yyyy-mm-dd hh:mm:ss" align=center id="startTime" [(ngModel)]="asn.DateOfSubmission" name="startDateTime"  [min]="todayDate">
+            </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>

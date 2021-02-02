@@ -1,0 +1,38 @@
+<app-headers></app-headers>
+<br><br><br><br><br><br>
+<h3>New Placement Record</h3>
+
+<div  style="width: 400px;">
+<form (ngSubmit)="saveCourse()">
+
+  <div class="form-group">
+      <label for="name">PRN Number</label>
+      <input type="number" class="form-control" id="prn" required [(ngModel)]="place.prn" name="prn">
+    </div>
+
+  <div class="form-group">
+    <label for="name">Student Name</label>
+    <input type="text" class="form-control" id="studentname" required [(ngModel)]="place.studentname" name="studentname">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Company Name</label>
+    <input type="text" class="form-control" id="companyname" required [(ngModel)]="place.companyname" name="companyname">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Course Name</label>
+    <input type="text" class="form-control" id="coursename" required [(ngModel)]="place.coursename" name="coursename">
+  </div>
+  <div class="form-group">
+    <label for="name">PassOut Batch</label>
+    <input type="text" class="form-control" id="batch" required [(ngModel)]="place.batch" name="batch">
+  </div>
+
+  <div style="float:right">
+      <h3><a href="/placement">All Placement Records</a></h3>
+</div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>
+

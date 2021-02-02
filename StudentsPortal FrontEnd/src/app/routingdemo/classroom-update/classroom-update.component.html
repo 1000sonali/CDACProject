@@ -1,0 +1,30 @@
+<app-headers></app-headers>
+<br><br><br><br>
+
+
+
+<div  style="width: 400px; margin-left: 450px;" align=center>
+    <form (ngSubmit)="updateClassRoom()">
+        <div class="form-group" align=center>
+            <label for="name">Classroom ID</label>
+            <input type="number" class="form-control" align=center id="examId" required readonly [(ngModel)]="clsrm.classid" name="dailyId">
+          </div>
+    
+          <div class="form-group" align=center>
+            <label for="name">Google Class Room Id</label>
+            <input type="text" class="form-control" align=center id="examLink" required [(ngModel)]="clsrm.classRoomId" name="classroomID" required>
+          </div>
+
+          
+          <div class="form-group" align=center>
+            <label for="name">Google Class Room Pwd</label>
+            <input type="text" class="form-control" align=center id="examLink" required [(ngModel)]="clsrm.classRoomPwd" name="classRoomPwd" required>
+          </div>
+       
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+
+
+

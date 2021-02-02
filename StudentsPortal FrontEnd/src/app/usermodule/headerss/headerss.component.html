@@ -1,0 +1,66 @@
+ <!-- ======= Header ======= -->
+ <header id="header" class="fixed-top">
+  <div class="container d-flex align-items-center">
+
+    <h1 class="logo mr-auto"><a href="index.html">Student's Online Portal</a></h1>
+     <!-- <a href="index.html" class="logo mr-auto"><img src="../../../assets/img/logo.png" alt="" class="img-fluid"></a>
+     -->
+    
+     <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a routerLink='/home'>Home</a></li>
+        <li><a routerLink='/aboutus'>AboutUs</a></li>
+        <li><a routerLink="/stdplacements">Placements</a></li>
+
+        <li class="drop-down"><a href="">Courses</a>
+
+          <ul>
+            <li *ngFor="let crs of courses" >
+              <a href="/stdroutecourse">{{crs.courseName}}</a>
+            </li>
+                     
+          </ul>
+        </li>
+        
+      
+        <li><a routerLink='/stdsubject'>Subjects</a></li>
+
+
+        <div class="yourCssClass" *ngIf="this.isButton">
+          <a routerLink="/login" class="get-started-btn">Login</a>
+        </div> 
+
+
+        <li  *ngIf="this.isButtonVisible">
+          <a routerLink=""><img src="../../../assets/img/user.png" width="40px" height="40px"></a>
+          <ul>
+            <li class="drop-down"><a href=""></a>
+              <ul>
+                <li  *ngIf="!this.isstudent"><a href="/stdupdatefaculty" >Update Profile</a></li>
+                <li><a href="/login" (click)="logout()">Logout</a></li> 
+                <li  *ngIf="this.isstudent"><a href="/stdupdatestudent" >Update Profile</a></li>     
+              </ul>
+              </li>
+          </ul>
+          
+        </li>
+       
+         
+      
+      </ul>
+   
+     
+    
+      
+
+</nav><!-- .nav-menu -->
+
+
+
+</div>
+</header><!-- End Header -->
+<br>
+<marquee  scrollamount="6">
+ <b style="color: crimson; font-family: cursive;">Welcome to Student's Online Portal</b></marquee>
+
+<router-outlet></router-outlet>

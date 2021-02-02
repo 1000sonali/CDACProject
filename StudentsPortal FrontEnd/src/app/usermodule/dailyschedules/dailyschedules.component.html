@@ -1,0 +1,34 @@
+<app-headerss></app-headerss>
+<br><br><br><br><br><br>
+
+<div class="panel panel-primary">
+  <div class="panel-heading" align=center>
+    <h2>Daily Schedule</h2>
+  </div>
+  <div class="panel-body" style="width: 400px; margin-left: 450px;" align=center>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>StartTime</th>
+          <th>EndTime</th>
+          <th>Link(Zoom/Teams)</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ds of dsch">
+          <td>{{ds.subject}}</td>
+          <td>{{ds.startDateTime}}</td>
+          <td>{{ds.endDateTime}}</td>
+          <td><a href="http://{{ds.dailySchLink}}" target="_blank">http://{{ds.dailySchLink}}</a></td>
+          <td>{{ds.coursenamesub.courseName}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+</div>
+

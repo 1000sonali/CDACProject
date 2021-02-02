@@ -1,0 +1,21 @@
+<app-headers></app-headers>
+<br><br><br><br><br>
+<h3>Add New Faculty</h3>
+
+<div  style="width: 400px;">
+<form (ngSubmit)="saveFaculty()" style="align-self: center;">
+
+   <div class="form-group">
+    <label for="name">Faculty First Name</label>
+    <input type="text" class="form-control" id="studentfname" required [(ngModel)]="faculty.firstname" name="studentfname">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Faculty Last Name</label>
+    <input type="text" class="form-control" id="studentlname" required [(ngModel)]="faculty.lastname" name="studentlname">
+  </div>
+
+
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+</div>

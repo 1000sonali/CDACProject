@@ -1,0 +1,34 @@
+<br><br><br><br>
+
+
+
+<div  style="width: 400px;">
+    <form (ngSubmit)="insertSubject()">
+            
+        <div class="form-group">
+          <label for="name">Subject Name</label>
+          <input type="text" class="form-control" id="subjectName" required [(ngModel)]="subj.subjectName" name="subjectName">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Course</label>
+            <select class="form-control" id="courseId"  required [(ngModel)]="crsid" name="courseId">
+           
+              <option *ngFor="let o of coptions" value={{o.courseId}}>
+              {{o.courseName}}
+            </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name">Faculty</label>
+            <select class="form-control" id="facultyId" required [(ngModel)]="facultyid" name="facultyId">
+              <option *ngFor="let p of foptions" value={{p.facultyid}}>
+                {{p.fname}}
+              </option>
+              </select>
+            </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>

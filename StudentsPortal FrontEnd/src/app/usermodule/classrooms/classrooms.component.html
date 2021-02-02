@@ -1,0 +1,31 @@
+<app-headerss></app-headerss>
+
+<br><br><br><br>
+
+<div class="panel panel-primary">
+  <div class="panel-heading" align=center>
+    <h2>Classroom for Submit the assignments</h2>
+  </div>
+  <div class="panel-body" style="width: 400px; margin-left: 450px;" align=center>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Class Room Id</th>
+          <th>Class Room Password</th>
+          <th>Course Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let clsrm of classroom"> 
+            <td>{{clsrm.classRoomId}}</td>
+            <td>{{clsrm.classRoomPwd}}</td>
+            <td>{{clsrm.crsClassRoom.courseName}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+
+</div>
+

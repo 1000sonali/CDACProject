@@ -1,0 +1,30 @@
+<app-headerss></app-headerss>
+<br><br><br><br><br><br>
+
+<div class="panel panel-primary">
+  <div class="panel-heading" align=center>
+    <h2>Exam List</h2>
+  </div>
+  <div class="panel-body" style="width: 400px; margin-left: 450px;" align=center>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Exam Subject Name</th>
+          <th>Exam Link</th>  
+          <th>Start Date & Time</th>
+          <th>End Date & Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ex of exams">
+          <td class="blink_me">{{ex.examSubject}}</td>
+          <td><a href="{{ex.examLink}}" target="_blank">http://{{ex.examLink}}</a></td>
+          <td>{{ex.startDateTime}}</td>
+          <td>{{ex.endDateTime}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>

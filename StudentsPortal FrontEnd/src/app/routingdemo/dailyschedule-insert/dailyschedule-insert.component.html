@@ -1,0 +1,40 @@
+<app-headers></app-headers>
+<br><br><br><br><br><br>
+
+
+<div  style="width: 400px; margin-left: 450px;" align=center>
+    <form (ngSubmit)="insertDailySchedule()">
+            
+        <div class="form-group">
+          <label for="name">Subject Name</label>
+          <input type="text" class="form-control" id="subjectName" required [(ngModel)]="dsch.subject" name="subjectName">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Course</label>
+            <select class="form-control" id="courseId"  required [(ngModel)]="crsid" name="courseId">
+           
+              <option *ngFor="let o of coptions" value={{o.courseId}}>
+              {{o.courseName}}
+            </option>
+            </select>
+          </div>
+
+          <div class="form-group" align=center>
+            <label for="name">Zoom/Teams Link</label>
+            <input type="text" class="form-control" align=center id="examLink" required [(ngModel)]="dsch.dailySchLink" name="dailySchLink" required>
+          </div>
+
+        <div class="form-group" align=center>
+            <label for="name">Start time & Date</label>
+            <input type="datetime-local" class="form-control" placeholder="yyyy-mm-dd hh:mm:ss" align=center id="startTime" required [(ngModel)]="dsch.startDateTime" name="startDateTime"  [min]="todayDate" required>
+          </div>
+
+          <div class="form-group" align=center>
+            <label for="name">End time & Date</label>
+            <input type="datetime-local" class="form-control" align=center id="endTime" required [(ngModel)]="dsch.endDateTime" name="endDateTime"  [min]="todayDate" required >
+          </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>

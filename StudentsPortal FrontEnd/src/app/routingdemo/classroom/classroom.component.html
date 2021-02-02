@@ -1,0 +1,34 @@
+<app-headers></app-headers>
+
+<br><br><br><br>
+
+<div class="panel panel-primary">
+  <div class="panel-heading" id="component2">
+    <h2>Classroom for Submit the assignments</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped" id="table-excel">
+      <thead>
+        <tr>
+          <th>Class Room Id</th>
+          <th>Class Room Password</th>
+          <th>Course Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let clsrm of classroom"> 
+            <td>{{clsrm.classRoomId}}</td>
+            <td>{{clsrm.classRoomPwd}}</td>
+            <td>{{clsrm.crsClassRoom.courseName}}</td>
+
+          <td><button (click)="deleteClassRoom(clsrm.classid)" class="btn btn-danger">Delete</button>
+            <button (click)="updateClassRoom(clsrm)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a href="/insertclassroom"  style="margin-left: 10px">Add new ClassRoom for assignment submission</a>
+
+</div>

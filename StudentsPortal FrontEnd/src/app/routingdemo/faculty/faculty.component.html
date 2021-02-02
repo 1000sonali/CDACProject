@@ -1,0 +1,46 @@
+<app-headers></app-headers>
+<br><br><br><br><br><br>
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading" id="component2">
+    <h2>Faculty List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped" id="excel-table">
+      <thead>
+        <tr>
+          <th>Faculty ID</th>
+          <th>Faculty First Name</th>
+          <th>Faculty Last Name</th>
+          <th>Faculty Date of Birth</th>
+          <th>Faculty Email</th>
+          <th>Faculty Contact No</th>
+          <th>Faculty Address</th>
+          <th><button (click)="printComponent('component2')" class="btn btn-info">Print</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <button (click)="exportexcel()" class="btn btn-info">Export to Excel</button></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let fs of faculties">
+          <td>{{fs.facultyid}}</td>
+          <td>{{fs.fname}}</td>
+          <td>{{fs.lname}}</td>
+          <td>{{fs.dob}}</td>
+          <td>{{fs.email}}</td>
+          <td>{{fs.phno}}</td>
+          <td>{{fs.address}}</td>
+          <td><button (click)="deleteStudent(fs.courseId)" class="btn btn-danger">Delete</button>
+           
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+</div>
+
+<br><br><br><br>

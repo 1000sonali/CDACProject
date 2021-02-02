@@ -1,0 +1,24 @@
+<app-headers></app-headers>
+<br><br><br><br><br><br>
+
+<div  style="width: 400px; margin-left: 450px;" align=center>
+    <form (ngSubmit)="updatetNotes()">
+        <div class="form-group" align=center>
+            <label for="name">Notes ID</label>
+            <input type="number" class="form-control" align=center id="examId" required readonly [(ngModel)]="nts.nid" name="dailyId">
+          </div>
+    
+
+        
+        <div class="form-group" align=center>
+            <label for="name">Drive Link</label>
+            <input type="text" class="form-control" align=center id="examLink" required [(ngModel)]="nts.noteLink" name="dailySchLink">
+          </div>
+
+       
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+
+

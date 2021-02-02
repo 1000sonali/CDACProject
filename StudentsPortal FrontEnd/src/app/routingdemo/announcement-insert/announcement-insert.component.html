@@ -1,0 +1,44 @@
+<app-headers></app-headers>
+<br><br><br><br><br><br>
+<div class="panel panel-primary">
+<div  class="panel-heading">
+    <h2>Add New Announcemet Here</h2>
+  <div class="form-group">
+    <label for="name">New Announcemet </label>
+    
+    <input type="text" class="form-control" id="ansmName" required [(ngModel)]="ans.ansmName" name="ansmName">
+  </div>
+  
+  <td><button (click)="insertAnnouncement()" class="btn btn-danger">Add Announcement</button> </td>
+</div>
+
+  <div class="panel-heading">
+    <h2>Announcement List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Announcement Number</th>
+          <th>Announcement Detail</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ans of announce">
+          <td>{{ans.ansmId}}</td>
+          <td>{{ans.ansmName}}</td>
+         
+          <td><button (click)="deleteAnnouncement(ans.ansmId)" class="btn btn-danger">Delete</button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+  
+</div>
+
+<br><br>
+        
+

@@ -1,0 +1,62 @@
+
+  <!-- ======= Footer ======= -->
+  <ul>
+    <li *ngFor="let crs of announc" ><a href="/routecourse">{{crs.ansName}}</a></li>
+             
+  </ul>
+  <footer id="footer">
+   
+    <div class="footer-top"  >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h2>Our Mission</h2>
+            <p style="text-align: justify;">
+              Our mission is to create high skilled IT resources which are 
+              recognized by major corporates in India. We strive to inculcate
+               strong technical and interpersonal skills that help the students
+                excel in the corporate world.<br><br>
+              
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 footer-contact"  >
+            <h2>Student's Online Portal</h2>
+            <p style="text-align: justify;">
+              Institute for Advanced Computing & Software Development (IACSD)
+                Dr. D.Y. Patil Educational Complex,
+                Sector 29, Behind Akurdi Railway Station,
+                Nigdi Pradhikaran, Akurdi
+                Pune - 411044 <br><br>
+              
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h2>Contact Us</h2>
+            <p>
+              
+             <i class="fa fa-phone"></i>  &nbsp;&nbsp;&nbsp; 981265412331<br>
+             <i class="fa fa-envelope"></i>  &nbsp;&nbsp;&nbsp; info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-contact">
+            <h4>Important Announcements</h4>
+            <marquee direction="up" style="color:red;"  scrollamount="3" >
+              <ul>
+                <li *ngFor="let student of announc; index as i;" [attr.data-index]="i">
+                    {{student.ansmName}}
+                </li>
+            </ul>
+             
+
+            </marquee>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  
+   
+  </footer><!-- End Footer -->

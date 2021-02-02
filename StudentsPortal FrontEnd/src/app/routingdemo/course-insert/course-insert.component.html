@@ -1,0 +1,22 @@
+<app-headers></app-headers>
+<br><br><br><br><br><br>
+
+<h3>Add New Course</h3>
+
+  <div  style="width: 400px;">
+  <form (ngSubmit)="saveCourse()" style="align-self: center;">
+
+
+    <div class="form-group">
+      <label for="name">Course Name</label>
+      <input type="text" class="form-control" id="courseName" required [(ngModel)]="course.courseName" name="courseName">
+    </div>
+    <div style="float:right">
+        <h3><a href="/course">All Courses</a></h3>
+  </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<br><br>
+        

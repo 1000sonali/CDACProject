@@ -1,0 +1,27 @@
+<app-headerss></app-headerss>
+<br><br><br><br><br><br>
+
+<div class="panel panel-primary">
+  <div class="panel-heading" align=center>
+    <h2>Notes List</h2>
+  </div>
+  <div class="panel-body" style="width: 400px; margin-left: 450px;" align=center>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Notes link</th>
+          <th>Course Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nts of notes"> 
+          <td><a href="http://{{nts.noteLink}}" target="_blank">http://{{nts.noteLink}}</a></td>
+            <td>{{nts.crsNotes.courseName}}</td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+
+</div>

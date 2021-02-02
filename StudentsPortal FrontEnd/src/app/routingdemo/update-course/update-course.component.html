@@ -1,0 +1,17 @@
+<app-headers></app-headers>
+<br><br><br><br><br><br>
+<div  style="width: 400px; margin-left: 450px;" align=center>
+    <form (ngSubmit)="updateCourse()">
+        <div class="form-group" align=center>
+            <label for="name">Course ID</label>
+            <input type="number" class="form-control" align=center id="courseId" required readonly [(ngModel)]="updtcourse.courseId" name="courseId">
+          </div>
+    
+        <div class="form-group" align=center>
+          <label for="name">Course Name</label>
+          <input type="text" class="form-control" align=center id="courseName" required [(ngModel)]="updtcourse.courseName" name="courseName">
+        </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>

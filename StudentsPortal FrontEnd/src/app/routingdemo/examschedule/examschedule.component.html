@@ -1,0 +1,40 @@
+<app-headers></app-headers>
+<br><br><br><br><br><br>
+
+<div class="panel panel-primary">
+  <div class="panel-heading" id="component2">
+    <h2>Exam List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped" id="table-excel">
+      <thead>
+        <tr>
+          <th>Exam Subject Name</th>
+          <th>Exam Link</th>  
+          <th>Start Date & Time</th>
+          <th>End Date & Time</th>
+          <th><button (click)="printComponent('component2')" class="btn btn-info">Print</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         <button (click)="exportexcel()" class="btn btn-info">Export to Excel</button>
+</th>
+        
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ex of exams">
+          <td class="blink_me">{{ex.examSubject}}</td>
+          <td><a href="http://{{ex.examLink}}" target="_blank">http://{{ex.examLink}}</a></td>
+          <td>{{ex.startDateTime}}</td>
+          <td>{{ex.endDateTime}}</td>
+          <td><button (click)="deleteExam(ex.schNo)" class="btn btn-danger">Delete</button>
+            <button (click)="updateExam(ex)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <a href="/insertexam"  style="margin-left: 10px">Add new Exam-Schedule</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://support.google.com/docs/answer/7032287?hl=en" target="_blank"  style="margin-left: 10px">Create a exam</a>
+</div>

@@ -1,0 +1,24 @@
+<app-headers></app-headers>
+<br><br><br><br><br>
+<h3>Add New Student</h3>
+
+<div  style="width: 400px;">
+<form (ngSubmit)="saveStudent()" style="align-self: center;">
+
+
+  <div class="form-group">
+    <label for="name">Student First Name</label>
+    <input type="text" class="form-control" id="studentfname" required [(ngModel)]="student.firstname" name="studentfname">
+  </div>
+
+  <div class="form-group">
+    <label for="name">Student Last Name</label>
+    <input type="text" class="form-control" id="studentlname" required [(ngModel)]="student.lastname" name="studentlname">
+  </div>
+
+  <button type="submit" class="btn btn-success">Submit</button>
+</form>
+<div style="float:right">
+  <h3><a href="/adminstudent">All Students</a></h3>
+</div>
+</div>

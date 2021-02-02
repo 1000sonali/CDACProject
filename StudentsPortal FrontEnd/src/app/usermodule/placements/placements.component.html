@@ -1,0 +1,27 @@
+<app-headerss></app-headerss>
+<br><br><br><br><br><br>
+
+<div class="panel panel-primary">
+  <div class="panel-heading" align=center>
+    <h2>Placement List</h2>
+  </div>
+  <div class="panel-body" style="width: 400px; margin-left: 450px;" align=center>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Company Name</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let record of placements">
+          <td>{{record.studentname}}</td>
+          <td>{{record.companyname}}</td>
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+</div>

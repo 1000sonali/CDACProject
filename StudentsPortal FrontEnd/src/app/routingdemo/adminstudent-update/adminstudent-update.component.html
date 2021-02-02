@@ -1,0 +1,30 @@
+<app-headers></app-headers>
+<br><br><br><br>
+
+
+
+<div  style="width: 400px; margin-left: 450px;" align=center>
+    <form (ngSubmit)="updateStudent()">
+        <div class="form-group" align=center>
+            <label for="name">Student ID</label>
+            <input type="number" class="form-control" align=center id="stdid" required readonly [(ngModel)]="student.prnNo" name="stdid">
+          </div>
+    
+          <div class="form-group" align=center>
+            <label for="name">Student First Name</label>
+            <input type="text" class="form-control" align=center id="fname" required [(ngModel)]="student.firstname" name="fname">
+          </div>
+
+          
+          <div class="form-group" align=center>
+            <label for="name">Student Last Name</label>
+            <input type="text" class="form-control" align=center id="lname" required [(ngModel)]="student.lastname" name="lname">
+          </div>
+       
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+
+
+
